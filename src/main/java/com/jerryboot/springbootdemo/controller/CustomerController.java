@@ -106,7 +106,7 @@ public class CustomerController {
 		return list;
 	}
 
-	@GetMapping("customer/page1/{pageNumber1}")
+	@GetMapping("customer/page12/{pageNumber1}")
 	public List<Customer> findByPage2(@PathVariable Integer pageNumber1){
 		Pageable pgb = PageRequest.of(pageNumber1 - 1, 5, Sort.Direction.ASC, "level");
 		Page<Customer> page = dao.findAll(pgb);
